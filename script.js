@@ -6,6 +6,7 @@ const closeTriggers = document.querySelectorAll('[data-close-video]');
 const revealItems = document.querySelectorAll('.reveal');
 const scenes = document.querySelectorAll('.scene');
 const sceneMotionState = new WeakMap();
+const mobileMotionQuery = window.matchMedia('(max-width: 640px)');
 let targetScrollY = window.scrollY || 0;
 let currentScrollY = targetScrollY;
 let scrollAnimationFrame = 0;
@@ -66,12 +67,34 @@ document.addEventListener('keydown', (event) => {
 });
 
 function updateSceneTransitions(scrollY = window.scrollY || 0) {
+    if (mobileMotionQuery.matches) {
+        scenes.forEach((scene) => {
+            const stage = scene.querySelector('.scene-stage');
+            if (stage) {
+                stage.style.transform = 'none';
+                stage.style.opacity = '1';
+            }
+            scene.classList.add('is-active');
+            scene.classList.remove('is-leaving', 'is-entering');
+        });
+        return;
+    }
+
     const viewportHeight = window.innerHeight || 1;
     const viewportCenter = scrollY + viewportHeight * 0.5;
 
     scenes.forEach((scene, index) => {
         const stage = scene.querySelector('.scene-stage');
         if (!stage) {
+            return;
+        }
+
+        if (scene.id === 'contact') {
+            scene.classList.add('is-active');
+            scene.classList.remove('is-leaving', 'is-entering');
+            stage.style.transform = 'none';
+            stage.style.opacity = '1';
+            scene.style.zIndex = String(scenes.length - index);
             return;
         }
 
@@ -116,6 +139,11 @@ function updateSceneTransitions(scrollY = window.scrollY || 0) {
 }
 
 function requestSceneUpdate() {
+    if (mobileMotionQuery.matches) {
+        updateSceneTransitions();
+        return;
+    }
+
     targetScrollY = window.scrollY || 0;
 
     if (scrollAnimationFrame) {
@@ -143,6 +171,12 @@ window.addEventListener('scroll', requestSceneUpdate, { passive: true });
 window.addEventListener('resize', requestSceneUpdate);
 window.addEventListener('load', requestSceneUpdate);
 requestSceneUpdate();
+
+if (mobileMotionQuery.addEventListener) {
+    mobileMotionQuery.addEventListener('change', requestSceneUpdate);
+} else if (mobileMotionQuery.addListener) {
+    mobileMotionQuery.addListener(requestSceneUpdate);
+}
 
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

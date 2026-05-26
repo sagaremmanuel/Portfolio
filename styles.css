@@ -939,6 +939,33 @@ main {
     .contact-actions button {
         width: 100%;
     }
+
+    .scene {
+        min-height: auto;
+        padding: 56px 0;
+    }
+
+    .scene-stage {
+        position: relative;
+        top: auto;
+        transform: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+        will-change: auto;
+    }
+
+    .scene:not(.is-active) .frame-card,
+    .scene:not(.is-active) .project-card,
+    .scene:not(.is-active) .about-card,
+    .scene:not(.is-active) .contact-panel,
+    .scene.is-active .frame-card,
+    .scene.is-active .project-card,
+    .scene.is-active .about-card,
+    .scene.is-active .contact-panel {
+        transform: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+    }
 }
     position: fixed;
     background: rgba(26, 35, 50, 0.92);
