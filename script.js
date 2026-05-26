@@ -158,21 +158,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealItems.forEach((item) => revealObserver.observe(item));
 
-// Ensure the Instagram contact link always opens externally and doesn't trigger page navigation
-try {
-    const instaLink = document.querySelector('.contact-actions a[href*="instagram"]');
-    if (instaLink) {
-        instaLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            const url = instaLink.href;
-            window.open(url, '_blank', 'noopener noreferrer');
-        });
-    }
-} catch (err) {
-    // silent
-}
-
 // Smooth scroll for Back to top button
 try {
     const backBtn = document.getElementById('backToTop');

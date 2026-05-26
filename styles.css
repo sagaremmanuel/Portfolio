@@ -329,6 +329,11 @@ main {
     z-index: 41;
 }
 
+.contact-actions a,
+.contact-actions button {
+    flex: 0 1 auto;
+}
+
 .button {
     display: inline-flex;
     align-items: center;
@@ -922,6 +927,17 @@ main {
     .about-copy h2,
     .contact-panel h2 {
         line-height: 1;
+    }
+
+    .contact-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .contact-actions a,
+    .contact-actions button {
+        width: 100%;
     }
 }
     position: fixed;
