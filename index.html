@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Black and yellow cinematic portfolio built from local video and image assets.">
+    <title>Sagar Emmanuel Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="site-shell">
+        <nav class="topbar">
+            <a class="brand" href="#home" aria-label="Sagar Emmanuel home">
+                <span class="brand-mark">
+                    <img src="cinematic-1.jpg" alt="Cinematic still 1">
+                </span>
+                <span class="brand-copy">
+                    <strong>Sagar Emmanuel</strong>
+                    <small>Editor</small>
+                </span>
+            </a>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <a class="nav-cta" href="#contact">Available for select projects</a>
+        </nav>
+
+        <main>
+            <section class="scene hero-scene" id="home">
+                <div class="scene-stage">
+                    <div class="hero-grid">
+                        <div class="hero-copy reveal">
+                            <p class="hero-name">Sagar Emmanuel</p>
+                            <p class="eyebrow">Obsessed with quality and aesthetics in every detail.</p>
+                            <h1>I make people feel the story.</h1>
+                            <p class="hero-text">
+                                Focused on cinematic edits, aesthetic visuals, sound design, and graphic design to craft engaging digital content.
+                            </p>
+                            <div class="hero-actions">
+                                <a class="button button-solid" href="#work">View selected work</a>
+                                <a class="button button-ghost" href="#about">More about me</a>
+                            </div>
+                            <div class="hero-metrics">
+                                <div>
+                                    <strong>Focused</strong>
+                                    <span>Quality</span>
+                                </div>
+                                <div>
+                                    <strong>Focused</strong>
+                                    <span>Speed</span>
+                                </div>
+                                <div>
+                                    <strong>Focused</strong>
+                                    <span>Impact</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hero-visual reveal delay-1">
+                            <div class="frame-card main-frame">
+                                <video autoplay muted loop playsinline preload="metadata" poster="cinematic-1.jpg">
+                                    <source src="Cinematic.mp4" type="video/mp4">
+                                </video>
+                                <div class="frame-label">
+                                    <span>Featured reel</span>
+                                    <strong>Cinematic cut</strong>
+                                </div>
+                            </div>
+                            <div class="stacked-strip">
+                                <img src="cinematic-3.jpg" alt="Cinematic still 3">
+                                <img src="cinematic-6.jpg" alt="Cinematic still 6">
+                                <img src="cinematic-2.jpg" alt="Portrait still">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ticker" aria-hidden="true">
+                        <div class="ticker-track">
+                            <span>Documentary</span>
+                            <span>Motion Design</span>
+                            <span>Color Grading</span>
+                            <span>Short Form</span>
+                            <span>Storytelling</span>
+                            <span>Editorial Rhythm</span>
+                            <span>Documentary</span>
+                            <span>Motion Design</span>
+                            <span>Color Grading</span>
+                            <span>Short Form</span>
+                            <span>Storytelling</span>
+                            <span>Editorial Rhythm</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="scene work-section" id="work">
+                <div class="scene-stage">
+                    <div class="section-head reveal">
+                        <p class="eyebrow">Selected work</p>
+                        <h2>Three lanes, one visual signature.</h2>
+                        <p>
+                            Here’s some of my recent work, crafted with a focus on cinematic visuals, aesthetics, and sound design — all made in under 5 hours.
+                        </p>
+                    </div>
+
+                    <div class="work-grid">
+                        <article class="project-card reveal">
+                            <div class="project-media">
+                                <video muted loop playsinline preload="none" poster="cinematic-1.jpg">
+                                    <source src="Documentary.mp4" type="video/mp4">
+                                </video>
+                                <button class="play-chip" type="button" data-video="Documentary.mp4" data-poster="cinematic-1.jpg" data-title="Documentary reel">Play</button>
+                            </div>
+                            <div class="project-copy numbered">
+                                <p class="project-number">01</p>
+                                <p class="project-label">Documentary</p>
+                            </div>
+                        </article>
+
+                        <article class="project-card reveal delay-1">
+                            <div class="project-media">
+                                <video muted loop playsinline preload="none" poster="cinematic-4.jpg">
+                                    <source src="Cinematic 2.mp4" type="video/mp4">
+                                </video>
+                                <button class="play-chip" type="button" data-video="Cinematic 2.mp4" data-poster="cinematic-4.jpg" data-title="Cinematic reel">Play</button>
+                            </div>
+                            <div class="project-copy numbered">
+                                <p class="project-number">02</p>
+                                <p class="project-label">Cinematic</p>
+                            </div>
+                        </article>
+
+                        <article class="project-card reveal delay-2">
+                            <div class="project-media">
+                                <video muted loop playsinline preload="none" poster="cinematic-8.jpg">
+                                    <source src="Normal.mp4" type="video/mp4">
+                                </video>
+                                <button class="play-chip" type="button" data-video="Normal.mp4" data-poster="cinematic-8.jpg" data-title="Short form reel">Play</button>
+                            </div>
+                            <div class="project-copy numbered">
+                                <p class="project-number">03</p>
+                                <p class="project-label">Visual</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="gallery-marquee reveal" aria-label="Cinematic stills moving sideways">
+                        <div class="gallery-track">
+                            <img src="cinematic-1.jpg" alt="Cinematic still 1">
+                            <img src="cinematic-2.jpg" alt="Cinematic still 2">
+                            <img src="cinematic-5.jpg" alt="Cinematic still 5">
+                            <img src="cinematic-7.jpg" alt="Cinematic still 7">
+                            <img src="cinematic-3.jpg" alt="Cinematic still 3">
+                            <img src="cinematic-6.jpg" alt="Cinematic still 6">
+                        </div>
+                        <div class="gallery-track" aria-hidden="true">
+                            <img src="cinematic-1.jpg" alt="">
+                            <img src="cinematic-2.jpg" alt="">
+                            <img src="cinematic-5.jpg" alt="">
+                            <img src="cinematic-7.jpg" alt="">
+                            <img src="cinematic-3.jpg" alt="">
+                            <img src="cinematic-6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="scene about-section" id="about">
+                <div class="scene-stage">
+                    <div class="about-card reveal">
+                        <div class="about-media">
+                            <img src="cinematic-1.jpg" alt="Cinematic still 1">
+                            <div class="about-overlay" aria-hidden="true">@saggaaaarr</div>
+                        </div>
+                        <div class="about-copy">
+                            <p class="eyebrow">About me</p>
+                            <h2>Creative work that stays lean, cinematic, and memorable.</h2>
+                            <p>
+                                I’m Sagar Emmanuel, a creator focused on cinematic edits, aesthetic visuals, and sound design.
+                                I also work on graphic design, branding, and creative digital content.
+                            </p>
+                            <div class="skill-pills">
+                                <span>Editing</span>
+                                <span>Storytelling</span>
+                                <span>Visual pacing</span>
+                                <span>Motion language</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="scene contact-section" id="contact">
+                <div class="scene-stage">
+                    <div class="contact-panel reveal">
+                        <div>
+                            <p class="eyebrow">Contact</p>
+                            <h2>Let’s build the next piece with impact.</h2>
+                        </div>
+                        <div class="contact-actions">
+                            <a class="button button-solid" href="https://www.instagram.com/saggaaaarr?igsh=MWtodGVibW9yOWE0Ng==" target="_blank" rel="noopener noreferrer">Instagram</a>
+                            <a class="button button-solid" href="mailto:saggaaaarr@gmail.com" aria-label="Email Sagar">Email</a>
+                            <a class="button button-ghost" href="#home">Back to top</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="video-modal" id="videoModal" aria-hidden="true">
+        <div class="video-modal-backdrop" data-close-video></div>
+        <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-label="Video preview">
+            <button class="modal-close" type="button" data-close-video aria-label="Close video preview">Close</button>
+            <video id="modalVideo" controls playsinline></video>
+            <div class="modal-caption">
+                <h3 id="modalTitle">Preview</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
