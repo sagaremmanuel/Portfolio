@@ -913,7 +913,7 @@ main {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 640px), (hover: none) and (pointer: coarse) {
     .site-shell {
         padding-inline: 12px;
     }
@@ -952,6 +952,11 @@ main {
         opacity: 1 !important;
         filter: none !important;
         will-change: auto;
+        pointer-events: none;
+    }
+
+    .scene-stage > * {
+        pointer-events: auto;
     }
 
     .scene:not(.is-active) .frame-card,
@@ -967,137 +972,6 @@ main {
         filter: none !important;
     }
 }
-    position: fixed;
-    background: rgba(26, 35, 50, 0.92);
-    border: 1px solid rgba(74, 158, 255, 0.10);
-    transform: translateX(-50%);
-    box-shadow: 0 20px 40px rgba(74, 158, 255, 0.12);
-    margin-top: 0.75rem;
-    background: rgba(74, 158, 255, 0.12);
-    border: 1px solid rgba(74, 158, 255, 0.18);
-    backdrop-filter: blur(18px);
-    background: linear-gradient(180deg, rgba(26, 35, 50, 1) 0%, rgba(15, 20, 25, 1) 100%);
-    border-radius: 999px;
-    box-shadow: var(--shadow-soft);
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid rgba(74, 158, 255, 0.10);
-
-/* (full restored styles content continues...) */
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0 0 20px rgba(74, 158, 255, 0.12);
-    z-index: 1;
-    box-shadow: 0 10px 30px rgba(74, 158, 255, 0.18);
-}
-    box-shadow: 0 15px 40px rgba(74, 158, 255, 0.22);
-.gradient-blob {
-    background: rgba(255, 255, 255, 0.9);
-    border-top: 1px solid rgba(74, 158, 255, 0.08);
-    filter: blur(90px);
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid rgba(74, 158, 255, 0.10);
-
-.blob-1 {
-    color: white;
-    height: 320px;
-    background: rgba(243, 239, 23, 0.16);
-    top: 16%;
-    left: -110px;
-    animation: float 10s ease-in-out infinite;
-}
-
-.blob-2 {
-    width: 260px;
-    height: 260px;
-    background: rgba(243, 239, 23, 0.1);
-    right: -80px;
-    bottom: 18%;
-    animation: float 12s ease-in-out infinite 2s;
-}
-
-.blob-3 {
-    width: 180px;
-    height: 180px;
-    background: rgba(255, 255, 255, 0.05);
-    right: 10%;
-    top: 44%;
-    animation: float 14s ease-in-out infinite 4s;
-}
-
-@keyframes float {
-    0%,
-    100% {
-        transform: translate3d(0, 0, 0) rotate(0deg);
-    }
-    25% {
-        transform: translate3d(18px, -28px, 0) rotate(8deg);
-    }
-    50% {
-        transform: translate3d(-10px, 10px, 0) rotate(0deg);
-    }
-    75% {
-        transform: translate3d(28px, 18px, 0) rotate(-8deg);
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-content {
-    animation: slideUp 0.9s ease-out;
-}
-
-/* Shared heading */
-.portfolio h2,
-.slideshow-container h2,
-.skills h2,
-.contact h2 {
-    margin-bottom: 2.5rem;
-    text-align: center;
-    font-size: clamp(2rem, 4vw, 3.3rem);
-    line-height: 1.05;
-    letter-spacing: -0.04em;
-    color: #fff;
-    background: linear-gradient(135deg, #ffffff 0%, #f6f2bd 40%, #f3ef17 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-/* Slideshow */
-.slideshow-section {
-    padding: 4.5rem 0 5rem;
-    background: linear-gradient(180deg, rgba(7, 7, 7, 1) 0%, rgba(10, 10, 10, 1) 100%);
-}
-
-.slideshow-wrapper {
-    position: relative;
-    width: min(100%, 1080px);
-    margin: 0 auto;
-}
-
-.slides-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    border-radius: 28px;
-    overflow: hidden;
-    background: #080808;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: var(--shadow);
-    backdrop-filter: blur(8px);
-}
-
-.slide {
-    display: none;
-    position: absolute;
     inset: 0;
     background-size: cover;
     background-position: center;
