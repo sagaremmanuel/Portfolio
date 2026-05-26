@@ -319,6 +319,16 @@ main {
     margin-top: 32px;
 }
 
+/* Ensure contact buttons are on top and their full area receives clicks */
+.contact-actions {
+    position: relative;
+    z-index: 40;
+}
+.contact-actions a {
+    position: relative;
+    z-index: 41;
+}
+
 .button {
     display: inline-flex;
     align-items: center;
