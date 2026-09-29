@@ -5,11 +5,28 @@ const playButtons = document.querySelectorAll('.play-chip');
 const closeTriggers = document.querySelectorAll('[data-close-video]');
 const revealItems = document.querySelectorAll('.reveal');
 const scenes = document.querySelectorAll('.scene');
+const heroVideo = document.querySelector('.main-frame video');
 const sceneMotionState = new WeakMap();
 const mobileMotionQuery = window.matchMedia('(max-width: 640px), (hover: none) and (pointer: coarse)');
 let targetScrollY = window.scrollY || 0;
 let currentScrollY = targetScrollY;
 let scrollAnimationFrame = 0;
+
+function playHeroVideo() {
+    if (heroVideo && heroVideo.paused) {
+        heroVideo.play().catch(() => {});
+    }
+}
+
+if (heroVideo) {
+    heroVideo.addEventListener('canplay', playHeroVideo);
+    window.addEventListener('load', playHeroVideo);
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) {
+            playHeroVideo();
+        }
+    });
+}
 
 function clamp(value, min, max) {
     return Math.min(Math.max(value, min), max);
