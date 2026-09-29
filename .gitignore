@@ -1,0 +1,67 @@
+# Portfolio Website Files
+
+## Repository Structure
+This repository contains a fully functional portfolio website for videographers, designers, and music producers.
+
+## What to Ignore
+
+# Videos and media files (tracked through Git LFS)
+*.avi
+*.mov
+*.mkv
+*.webm
+*.m4v
+
+# Local backup exports
+backups/
+
+# Large image files
+*.psd
+*.ai
+*.sketch
+*.xd
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+
+# Build files
+dist/
+build/
+node_modules/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Documentation generated
+docs/generated/
+
+# Dependencies (if using npm)
+package-lock.json
+yarn.lock
+
+## Note
+Add your actual video files and thumbnails to this directory:
+- sample-video-1.mp4 through sample-video-6.mp4
+- thumbnail-1.jpg through thumbnail-6.jpg
